@@ -1,24 +1,25 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-class condicional
+class Programa
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("testando condicionais");
-        int idade = 20;
-        int quantidadeDePessoas = 3;
-        bool acompanhado = true;
-        if (idade >= 18 && acompanhado)
+        double salario = 3300.0;
+
+        if (salario >= 1900.0 && salario <= 2800.0)
         {
-            Console.WriteLine("você é maior de idade");
-            Console.WriteLine("seja bem-vindo");
+            Console.WriteLine("o IR é de 7.5%");
+            Console.WriteLine("a dedução é de 142 reais");
         }
-        else
+        else if (salario >= 2800.01 && salario <= 3751.0)
         {
-            Console.WriteLine("Você é menor de idade");
+            Console.WriteLine("o IR é de 15%");
+            Console.WriteLine("a dedução é de 350 reais");
+        }
+        else if (salario >= 3751.01 && salario <= 4664.0)
+        {
+            Console.WriteLine("o IR é de 22.5%");
+            Console.WriteLine("a dedução é de 636 reais");
         }
     }
 }
